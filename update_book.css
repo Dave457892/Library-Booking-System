@@ -1,0 +1,183 @@
+/* General body and layout settings */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Wrapper that contains both the sidebar and the main content */
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;  /* Ensure wrapping in smaller screen sizes */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px;
+    width: 250px;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;  /* Ensure buttons are stacked vertically */
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.sidebar a:hover {
+    background-color: #0056b3;
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Main Content Area */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+/* Content section where the form resides */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Label and form input styling */
+form label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Focus state for inputs */
+form input:focus,
+form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Textarea specific styling */
+form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Button styles */
+button, .btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Save Changes Button */
+.form-actions .btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.form-actions .btn-success:hover {
+    background-color: #218838;
+}
+
+/* Cancel Button */
+.form-actions .btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.form-actions .btn-danger:hover {
+    background-color: #c82333;
+}
+
+
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+   
+    .button-container {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+

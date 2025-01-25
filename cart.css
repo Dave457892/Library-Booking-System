@@ -1,0 +1,174 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+
+.sidebar {
+    width: 250px;
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.sidebar a:hover {
+    background-color: #0056b3;
+}
+
+
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-size: 16px;
+}
+
+td {
+    background-color: #ffffff;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+
+button, .btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    max-width: 250px;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+}
+
+.btn-success {
+    background-color: #28a745;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+
+.cart-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+
