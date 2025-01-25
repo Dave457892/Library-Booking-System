@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-// Check if the user is not an admin
+
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
-    // If not admin, redirect to login page
+    
     header("Location: login.php");
     exit();
 }

@@ -33,7 +33,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         mysqli_query($conn, "SET FOREIGN_KEY_CHECKS = 1");
 
        
-        header("Location: index.php");
+        header("Location: home.php");
         exit();
     } catch (Exception $e) {
        

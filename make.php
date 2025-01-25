@@ -49,7 +49,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
             </div>
         </form>
         <br>
-        <a href="index.php">View All Users</a>
+        <a href="home.php">View All Users</a>
     </div>
 </body>
 </html>

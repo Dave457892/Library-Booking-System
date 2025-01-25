@@ -1,86 +1,82 @@
-<?php
-session_start();
-
-
-if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
-    header("Location: dashboard.php");  
-    exit();
-}
-
-
-include 'db.php';
-
-
-$sql = "SELECT * FROM users";
-$result = mysqli_query($conn, $sql);
-$users = mysqli_fetch_all($result, MYSQLI_ASSOC);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Users List</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="index.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Front Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="wrapper">
-       
-        <div class="sidebar">
-            <h2>USERS</h2>
-            <a href="make.php" class="btn btn-primary mb-3">Add New User</a> 
-            <a href="manage_book.php" class="btn btn-info mb-3">Manage Books</a> 
-        </div>
 
-      
-        <div class="main-content">
-            <div class="header">
-                <h2>Manage Users</h2>
-               
-                <a href="logout_confirm.php" class="btn btn-secondary btn-sm">LOG OUT</a>
-            </div>
+    <main>
+        <section class="hero">
+            <h2>Welcome to Library Booking!</h2>
+            <p>We are excited to have you here. Explore our website to learn more about what we offer.</p>
+            <a href="login.php" class="cta-button">Login</a>
+        </section>
 
-            <div class="content">
-                <table class="table table-striped table-bordered">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Profile Image</th>
-                            <th>Role</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php if (!empty($users)) : ?>
-                            <?php foreach ($users as $user) : ?>
-                                <tr>
-                                    <td><?php echo $user['id']; ?></td>
-                                    <td><?php echo $user['username']; ?></td>
-                                    <td><?php echo $user['email']; ?></td>
-                                    <td>
-                                        <img src="uploads/<?php echo $user['profile_image']; ?>" width="50" alt="Profile Image">
-                                    </td>
-                                    <td><?php echo ucfirst($user['role']); ?></td>
-                                    <td>
-                                        <a href="update.php?id=<?php echo $user['id']; ?>" class="btn btn-warning btn-sm">Edit</a>
-                                        <a href="delete_user.php?id=<?php echo $user['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete?')">Delete</a>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        <?php else : ?>
-                            <tr>
-                                <td colspan="6">No users found.</td>
-                            </tr>
-                        <?php endif; ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Library. All rights reserved.</p>
+    </footer>
+
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('arar.gif');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.hero {
+    background-color: rgba(128, 128, 128, 0.7);
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    margin-top: 100px;
+    border-radius: 25%;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.cta-button {
+    background-color: blue;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.cta-button:hover {
+    background-color: #87CEEB;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+</style>
+
 </body>
 </html>
-
-

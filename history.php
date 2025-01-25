@@ -50,7 +50,7 @@ if (isset($_GET['delete_history'])) {
        
         <div class="sidebar">
             <h2>BOOKS</h2>
-            <a href="index.php" class="btn btn-info mb-3">Home</a>
+            <a href="dashboard.php" class="btn btn-info mb-3">Home</a>
         </div>
 
        

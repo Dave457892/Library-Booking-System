@@ -32,7 +32,7 @@ $user = mysqli_fetch_assoc($result);
         <div class="sidebar">
             <h2>USERS</h2>
             <a href="make.php" class="btn btn-primary mb-3">Add New User</a>
-            <a href="manage_products.php" class="btn btn-info mb-3">Manage Products</a>
+           
         </div>
 
         
@@ -63,7 +63,7 @@ $user = mysqli_fetch_assoc($result);
                     
                     <div class="button-container">
                         <input type="submit" value="Update User" class="btn btn-success" onclick="return confirm('Confirm Changes?')">
-                        <a href="index.php" class="btn btn-danger">Cancel</a>
+                        <a href="home.php" class="btn btn-danger">Cancel</a>
                     </div>
                 </form>
             </div>

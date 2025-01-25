@@ -3,7 +3,7 @@ session_start();
 
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: index.php");  // Redirect if not logged in
+    header("Location: login.php");  
     exit();
 }
 
@@ -74,7 +74,7 @@ if (isset($_GET['add_to_cart'])) {
        
         <div class="sidebar">
             <h2>BOOKS</h2>
-            <a href="index.php" class="btn btn-info mb-3">Home</a>
+            <a href="dashboard.php" class="btn btn-info mb-3">Home</a>
         </div>
 
         

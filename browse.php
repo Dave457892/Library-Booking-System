@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] === 'admin') {
-    header("Location: index.php");
+    header("Location: home.php");
     exit();
 }
 
@@ -26,7 +26,7 @@ $books = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <div class="wrapper">
         <div class="sidebar">
             <h2>BOOKS</h2>
-            <a href="index.php" class="btn btn-info mb-3">Home</a>
+            <a href="dashboard.php" class="btn btn-info mb-3">Home</a>
         </div>
 
         <div class="main-content">

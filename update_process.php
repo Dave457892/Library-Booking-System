@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
    
     if (mysqli_query($conn, $sql)) {
-        header("Location: index.php");
+        header("Location: home.php");
         exit();
     } else {
         echo "Error: " . mysqli_error($conn);
